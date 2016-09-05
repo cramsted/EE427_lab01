@@ -1,0 +1,22 @@
+/*
+ * Clayton Ramstedt and Marshall Garey
+ *
+ * Prints a fibbonacci sequence via UART
+ */
+
+#include <stdio.h>
+#include "platform.h"
+
+int main(){
+	xil_printf("Starting Fibbonacci");
+	int secondVal = 0;
+	int firstVal = 1;
+	xil_printf("%d\n",secondVal);
+	while(firstVal >= 1000){
+		int temp = secondVal;
+		secondVal = firstVal;
+		firstVal = firstVal + temp;
+		xil_printf("%d\n",firstVal);
+	}
+}
+

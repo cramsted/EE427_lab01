@@ -1,0 +1,23 @@
+/*
+ * Clayton Ramstedt and Marshall Garey
+ *
+ * Prints a fibbonacci sequence via UART
+ */
+
+#include <stdio.h>
+#include "platform.h"
+
+void print(char *str);
+
+int main(){
+	int secondVal = 0;
+	int firstVal = 1;
+	print(secondVal);
+	while(1){
+		int temp = secondVal;
+		secondVal = firstVal;
+		firstVal = firstVal + temp;
+		print(firstVal);
+	}
+}
+
